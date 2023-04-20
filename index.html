@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pattu</title>
+    <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+</head>
+<style>
+    *{
+box-sizing: border-box;
+}
+body{
+  background-color: beige;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size:15px;
+  
+}
+.container{
+  width:350px;
+  height:30px;
+
+}
+.suprise label{
+  display: block;
+  margin-bottom: 7px;
+  font-size: 17px;
+
+
+}
+.suprise input{
+  margin-bottom: 5px;
+  padding:7px 15px;
+  border-radius: 10px;
+  margin-right: 10px;
+  /* box-shadow: 1px 1px; */
+  font-size: 15px;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
+  
+}
+.color{
+  color:red;  
+}
+
+.header h1{
+  font-size: 40px;
+ 
+}
+.suprise small{
+  display: flex;
+  font-size: 15px;
+  color:red;
+  padding-bottom: 5px;
+  visibility: hidden;
+}
+.suprise input:hover{
+  background-color:rgb(206, 197, 197);
+  
+
+}
+/* .suprise.radio input{
+  justify-content: center;
+  padding-bottom: 250px;
+  display: inline-block;
+  color:blue;
+
+} */
+.suprise.success input{
+  background-color: rgb(238, 69, 69);
+}
+.suprise.error input{
+  background-color: rgb(107, 107, 97);
+}
+.suprise i{
+  visibility: hidden;
+  position: absolute;
+  font-size:25px;
+  margin:2px;
+  
+  
+}
+.suprise.success i.fa-heart-circle-check{
+  color:  rgb(238, 69, 69);
+  visibility: visible;
+}
+.suprise.error i.fa-heart-circle-exclamation{
+  color:rgb(107, 107, 97);
+  visibility: visible;
+}
+
+.suprise.error small{
+  visibility: visible;
+}
+button{
+  padding:6px 20px;
+  border-radius: 10px;
+  margin-bottom: 40px;
+  font-size:15px;
+ }
+ button:hover{
+  background-color:rgb(206, 197, 197);
+
+ }
+
+</style>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i> Fill the<span class="color"> Love Form </span></i></h1>
+
+        </div>
+        <form id="form">
+            <div class="love">
+                <div class="suprise">
+                    <label> Your Name :</label>
+                    <input type="text" id="name" placeholder="enter the name">
+                    <i class="fa-solid fa-heart-circle-check"></i>
+                    <i class="fa-solid fa-heart-circle-exclamation"></i>
+                    <small>Error Enter vaild data</small>
+                </div>
+                <div class="suprise">
+                    <label>Age :</label>
+                    <input type="number" id="age" placeholder="enter the age">
+                    <i class="fa-solid fa-heart-circle-check"></i>
+                    <i class="fa-solid fa-heart-circle-exclamation"></i>
+                    <small>Error Enter vaild data</small>
+                </div>
+                <div class="suprise">
+                    <label>Your Partner Name : </label>
+                    <input type="text" id="Me" placeholder="enter the name">
+                    <i class="fa-solid fa-heart-circle-check"></i>
+                    <i class="fa-solid fa-heart-circle-exclamation"></i>
+                    <small>Error Enter vaild data</small>
+                </div>
+                <div class="suprise">
+                    <label>How Much You Like Me :</label>
+                    <input type="text" id="like" placeholder="only 0% to 100%">
+                    <i class="fa-solid fa-heart-circle-check"></i>
+                    <i class="fa-solid fa-heart-circle-exclamation"></i>
+                    <small>Error Enter vaild data</small>
+                </div>
+                <div class="suprise">
+                    <label>When Was The First Day I Saw You :</label>
+                    <input type="date" id="meet" placeholder="enter the day">
+                    <i class="fa-solid fa-heart-circle-check"></i>
+                    <i class="fa-solid fa-heart-circle-exclamation"></i>
+                    <small>Error Enter vaild data</small>
+                </div>
+                <div class="suprise">
+                    <label>When Did Our Love Journey Start :</label>
+                    <input type="date" id="start" placeholder="plzz thing after enter the answer">
+                    <i class="fa-solid fa-heart-circle-check"></i>
+                    <i class="fa-solid fa-heart-circle-exclamation"></i>
+                    <small>Error Enter vaild data</small>
+                </div>
+                <div class="suprise">
+                    <label>We Love Journey Has Started How Many Years:</label>
+                    <input type="number" id="years" placeholder="corrcet years to be enter">
+                    <i class="fa-solid fa-heart-circle-check"></i>
+                    <i class="fa-solid fa-heart-circle-exclamation"></i>
+                    <small>Error Enter vaild data</small>
+                </div>
+                <div class="suprise">
+
+                    <label>You Are Happy With Me:</label>
+                    <input type="text" id="happy" placeholder="yes or no">
+                    <i class="fa-solid fa-heart-circle-check"></i>
+                    <i class="fa-solid fa-heart-circle-exclamation"></i>
+                    <small>Error Enter vaild data</small>
+
+                </div>
+                <div class="suprise">
+                    <label>How Much I Have You Made Sad This Year:</label>
+                    <input type="text" id="sad" placeholder="plzz enter">
+                    <i class="fa-solid fa-heart-circle-check"></i>
+                    <i class="fa-solid fa-heart-circle-exclamation"></i>
+                    <small>Error Enter vaild data</small>
+                </div>
+                <button><b>submit</b></button>
+                <button><b>reset</b></button>
+            </div>
+        </form>
+    </div>
+
+
+    <script>
+        const form = document.getElementById("form");
+        const name = document.getElementById("name");
+        const age = document.getElementById("age");
+        const Me = document.getElementById("Me");
+        const like = document.getElementById("like");
+        const meet = document.getElementById("meet");
+        const start = document.getElementById("start");
+        const years = document.getElementById("years");
+        const happy = document.getElementById("happy");
+        const sad = document.getElementById("sad");
+
+        form.addEventListener('submit',e =>{
+            e.preventDefault();
+            checkInput();
+        });
+
+        function checkInput() {
+            const nameValue = name.value.trim();
+            const ageValue = age.value.trim();
+            const MeValue = Me.value.trim();
+            const likeValue = like.value.trim();
+            const meetValue = meet.value.trim();
+            const startValue = start.value.trim();
+            const yearsValue = years.value.trim();
+            const happyValue = happy.value.trim();
+            const sadValue = sad.value.trim();
+
+            // console.log(nameValue,"ooooo");
+
+
+            if (nameValue === '') {
+                
+                setError(name, 'name cannot be blank');
+                
+            }
+            else {
+              
+                setSuccess(name);
+            }
+            // console.log(name);
+            
+
+
+
+
+
+            if (ageValue === '') {
+                setError(age, 'age cannot be blank');
+            }
+            else if (ageValue == '23') {
+                setSuccess(age);
+            }
+            else {
+                setError(age);
+            }
+
+
+
+            if (MeValue === '') {
+                setError(Me, 'data cannot be blank');
+            }
+            else {
+                setSuccess(Me)
+            }
+
+
+
+            if (likeValue === '') {
+                setError(like, 'data cannot be blank');
+            }
+            else {
+                setSuccess(like);
+            }
+
+
+
+            if (meetValue === '') {
+                setError(meet, ' data cannot be black');
+            }
+            else {
+                setSuccess(meet);
+            }
+
+
+
+
+
+            if (startValue === '') {
+                setError(start, 'data cannot be black');
+            }
+            else {
+                setSuccess(start);
+            }
+
+
+
+
+            if (yearsValue === '') {
+                setError(years, 'data cannot be blank');
+            }
+            else {
+                setSuccess(years);
+            }
+
+
+            if (happyValue === '') {
+                setError(happy, 'data cannot be blank');
+            }
+            else {
+                setSuccess(happy);
+            }
+
+
+
+
+            if (sadValue === '') {
+                setError(sad, ' data cannot be blank');
+            }
+            else {
+                setSuccess(sad);
+            }
+        }
+        
+
+
+
+
+
+        function setError(input ,message) {
+            const suprise = input.parentElement;
+            const small = suprise.querySelector('small');
+            suprise.className = 'suprise error';
+            small.innerText = message;
+        }
+
+        function setSuccess(input) {
+            const suprise = input.parentElement;
+            suprise.className = 'suprise success';
+        }
+
+    
+
+
+
+
+
+    </script>
+</body>
+
+</html>
